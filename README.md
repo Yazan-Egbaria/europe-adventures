@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# europe-adventures
-=======
 # Europe Adventures Project
 
 The focus of my project is to create a website that offers guided adventure travel experiences in Europe whose main goal is to help the guide promote and market himself more effectively and profit from it. The site will feature a variety of fascinating activities, including hiking, mountain climbing, skiing, camping and nature exploration.
@@ -27,4 +24,3 @@ Overall, the idea of venturing into the wilderness can be intimidating, but with
 The target audience of this site will be people aged 18-38 who are interested in adventure travel in Europe and are looking for a guided experience. This may include people who are new to outdoor activities and looking to build their skills and confidence, or seasoned adventurers who want to explore new destinations and meet other like-minded people.
 
 The group size of 8-12 participants suggests that this experience would suit small groups of friends, families or solo travelers looking to join a group of other adventurers.
->>>>>>> 4ef9176 (Europe Adventures Website)
