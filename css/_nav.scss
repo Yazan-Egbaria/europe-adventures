@@ -1,0 +1,235 @@
+nav {
+	display: flex;
+	width: 100%;
+	padding: 1.5rem;
+	justify-content: space-around;
+	align-items: center;
+	background: rgb(2,3,3);
+	background: linear-gradient(180deg, rgba(2,3,3,1) 0%, rgba(2,3,3,0) 100%);
+	position: sticky;
+	top: 0;
+	z-index: 999999;
+	transition: all 0.3s ease;
+	ul {
+		list-style: none;
+		text-align: center;
+		margin: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+			margin-right: 25px;
+			position: relative;
+			a {
+				color: white;
+				text-decoration: none;
+				text-align: center;
+				font-size: 1.125rem;
+				font-weight:$navLink-fontWeight;
+				transition: all 0.3s ease;
+				&:after {
+					content: "";
+					height: 0px;
+					width: 100%;
+					background: $third-color;
+					position: absolute;
+					left: 0;
+					bottom: -3px;
+					transition: all 0.3s ease;
+				}
+				&:hover {
+					&:after {
+						transition: all 0.3s ease;
+						height: 2px;
+					}
+				}
+			}
+			a.active {
+				font-weight: $navLinkActive-fontWeight;
+				&:after {
+					height: 2px;
+				}
+			}
+		}
+	}
+}
+
+nav.scrolled {
+	background-color: $main-color;
+	opacity: 1;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid white;
+}
+
+.logo {
+    max-width: 100px;
+    z-index: 99999;
+    position: relative;
+}
+
+.login-button {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-size: $navLink-fontSize;
+	font-weight: $navLink-fontWeight;
+	transition: all 0.3s ease;
+	position: relative;
+	&:after {
+		content: "";
+		height: 0;
+		width: 100%;
+		background: $third-color;
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		&:after {
+			transition: all 0.3s ease;
+			height: 2px;
+		}
+	}
+}
+
+.hamburger {
+	display: block;
+	width: 40px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+	position: relative;
+	z-index: 99999;
+	.bar {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		margin: 6px 0;
+		background-color: white;
+		transition: all 0.3s ease;
+		z-index: 99999;
+	}
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		margin: 6px 0;
+		background-color: white;
+		transition: all 0.3s ease;
+		z-index: 99999;
+	}
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		margin: 6px 0;
+		background-color: white;
+		transition: all 0.3s ease;
+		z-index: 99999;
+	}
+}
+.hamburger.is-active {
+	&:before {
+		transform: rotate(-45deg) translate(-8px, 6px);
+		z-index: 99999;
+	}
+	&:after {
+		transform: rotate(45deg) translate(-5px,-4px);
+		z-index: 99999;
+	}
+	.bar {
+		opacity: 0;
+	}
+}
+
+.mobile-nav {
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 100%;
+	display: block;
+	z-index: 98;
+	background-color: $main-color;
+	padding: 25px;
+	transition: all 0.3s ease;
+	li {
+		&:first-child {
+			margin-top: 100px;
+		}
+		margin-bottom: 15px;
+		background-color: white;
+		padding: 10px;
+		width: 100%;
+		text-decoration: none;
+		margin-top: 25px;
+		border-radius: 0.3125rem;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		a {
+			color: $main-color;
+			text-decoration: none;
+			text-align: left;
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+		a.login {
+			color: white;
+			text-decoration: none;
+			text-align: left;
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+		&:hover {
+			background-color: $third-color;
+			transition: all 0.3s ease;
+			a {
+				color: white;
+				transition: all 0.3s ease;
+			}
+		}
+	}
+	li.login {
+		background-color: $main-color;
+		border: 1px solid white;
+		&:hover {
+			border: 1px solid transparent;
+			background-color: $third-color;
+		}
+	}
+}
+.mobile-nav.is-active {
+	left: 0;
+	transition: all 0.3s ease;
+}
+
+.web-nav {
+    position: static;
+    background-color: $main-color;
+}
+
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+	.mobile-nav {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.login-button {
+		display: none;
+	}
+	nav {
+		ul {
+			display: none;
+		}
+		justify-content: space-between;
+	}
+}
+

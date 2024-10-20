@@ -1,0 +1,49 @@
+$main-color: #020303;
+$secondary-color: #0A0B0B;
+$third-color: #BC7655;
+
+$h1-fontSize:35px;
+$h1-fontWeight:700;
+
+$h2-fontSize:25px;
+$h2-fontWeight:400;
+
+$h3-fontSize:18px;
+$h3-fontWeight:300;
+
+$h4-fontSize:15px;
+$h4-fontWeight:200;
+
+$h5-fontSize:20px;
+$h5-fontWeight:100;
+
+$p-fontSize:20px;
+$p-fontWeight:100;
+
+$btn-fontSize:18px;
+$btn-fontWeight:200;
+
+$navLink-fontSize:18px;
+$navLink-fontWeight:200;
+$navLinkActive-fontWeight:400;
+
+
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%imageCenter {
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 10% 80%;
+}

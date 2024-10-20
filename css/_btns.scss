@@ -1,0 +1,17 @@
+.main-button {
+	border-radius: 0.3125rem;
+	color: white;
+	border: 1px solid white;
+	padding: 5px 10px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: $btn-fontSize;
+	font-weight: $btn-fontWeight;
+	text-decoration: none;
+	&:hover {
+		border: 1px solid $third-color;
+		background-color: $third-color;
+		transition: all 0.3s ease;
+	}
+}

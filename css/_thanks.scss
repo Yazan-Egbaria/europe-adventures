@@ -1,0 +1,27 @@
+.section-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url('../images/hero-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px;
+    &-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: $h1-fontSize;
+            font-weight: $h1-fontWeight;
+        }
+        h2 {
+            font-size: $h2-fontSize;
+            font-weight: $h2-fontWeight;
+        }
+    }
+}
+
+

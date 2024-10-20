@@ -1,0 +1,252 @@
+@import 'utilities';
+@import 'vars';
+@import 'nav';
+@import 'btns.scss';
+@import 'homepage';
+@import 'loginpage';
+@import 'gallerypage';
+@import 'bookpage';
+@import 'contact';
+@import 'reservation';
+@import 'thanks';
+@import 'edventure-1';
+@import 'register';
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+html {
+	width: 100% !important;
+	overflow-x: hidden !important;
+}
+
+body { 
+	width: 100% !important;
+	overflow-x: hidden !important;
+    font-family: 'Poppins', sans-serif;
+    background-color: $main-color;
+    animation: fadeIn ease 2.5s;
+	position: relative;
+}
+
+.body-flex {
+    min-height: 100vh;
+    @extend %flexColumn;
+}
+
+header {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+	z-index: 1;
+}
+
+.web-header {
+	background-image: none;
+	min-height: 530px;
+	background-color: white;
+}
+
+.wallpaper {
+	min-height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	h1 {
+		font-size: $h1-fontSize;
+		font-weight: $h1-fontWeight;
+	}
+}
+.book-wallpaper {
+	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../images/1.jpg);
+	@extend %imageCenter;
+}
+.gallery-wallpaper {
+	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../images/2.jpg);
+	@extend %imageCenter;
+}
+.reservation-wallpaper {
+	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../images/3.jpg);
+	@extend %imageCenter;
+}
+.contact-wallpaper {
+	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../images/4.jpg);
+	@extend %imageCenter;
+}
+
+.main-container {
+	margin: 0 auto;
+	width: 1320px;
+}
+
+.section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+	min-height: 768px;
+}
+
+.full-hr {
+	box-shadow: 0 0 0 100vmax #FFFFFF;
+	clip-path: inset(0 -100vmax);
+	height: 0;
+	width: 0;
+	border: none;
+	border-top: 1px white solid;
+}
+
+h2 {
+    font-size: $h2-fontSize;
+    font-weight: $h2-fontWeight;
+    text-align: center;
+}
+
+footer {
+	padding-top: 50px;
+	width: 100vw;
+	height: 400px;
+	@extend %flexColumn;
+	color: white;
+	background-color: $main-color;
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+		text-align: center;
+		height: 250px;
+		h2 {
+		font-size: $h2-fontSize;
+		font-weight: $h2-fontWeight;
+		}
+		p {
+			font-size: $p-fontSize;
+			font-weight: $p-fontWeight;
+			width: 550px;
+		}
+		.footer-buttons {
+			display: flex;
+			gap: 50px;
+			.contact-button {
+				width: 150px;
+			}
+			.faq-button {
+				background-color: white;
+				color: $main-color;
+				width: 150px;
+				&:hover {
+					background-color: $third-color;
+					color: white;
+				}
+			}
+		
+		}
+	}
+	
+	.copyright {
+		border-top: 1px solid white;
+		height: 50px;
+		width: 100%;
+		color: white;
+		padding: 5px;
+		padding-left: 25px;
+		padding-right: 25px;
+		@extend %flexRow;
+		p {
+			font-size: 15px;
+			font-weight: 200;
+			width: fit-content;
+		}
+		ul {
+			list-style: none;
+			li {
+				text-decoration: none;
+				display: inline-block;
+				margin-right: 15px;
+				a {
+					color: white;
+					cursor: pointer;
+					text-decoration: none;
+					font-size: 15px;
+					font-weight: 200;
+					transition: all 0.3s ease;
+					&:hover {
+						color: $third-color;
+						transition: all 0.3s ease;
+					}
+				}
+			}
+		}
+	}
+}
+
+.icon {
+	position: absolute;
+	z-index: -1;
+	opacity: 0.10;
+}
+
+@media (max-width: 1399px) {
+    .main-container {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .main-container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-container {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-container {
+        width: 540px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-container {
+		width: 100%;
+	}
+	footer {
+		.footer-content {
+			height: 250px;
+				p {
+						font-size: 18px;
+				}
+				h2 {
+						font-size: 20px;
+				}
+		}
+		.copyright {
+			p {
+				font-size: 12px;
+			}
+			ul {
+				li {
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}

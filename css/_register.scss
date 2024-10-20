@@ -1,0 +1,334 @@
+.register-header {
+    min-height: 0;
+}
+
+.section-16 {
+    color: white;
+    @extend %flexColumn;
+    justify-content: center;
+    min-height: 100px;
+    .timestamp {
+        @extend %flexRow;
+        width: 100%;
+        z-index: -1;
+        h2 {
+            border-bottom: 1px solid white;
+            width: calc(34%);
+            text-align: left;
+            opacity: 1;
+            position: relative;
+            padding-left: 25px;
+            font-size: $h2-fontSize;
+            font-weight: 400;
+            &:first-child {
+                padding: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 100%;
+                transform: translateX(-50%);
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border-radius: 50%;
+                z-index: 1000;
+            }
+            &.active {
+                opacity: 1;
+                border-bottom: 1px solid $third-color;
+                color: $third-color;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 100%;
+                    transform: translateX(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background-color: $third-color;
+                    border-radius: 50%;
+                    z-index: 1000;
+                }
+            }
+        }
+    }
+}
+
+.section-17 {
+    h2 {
+        text-align: left;
+        font-size: $h2-fontSize;
+        font-weight: 400;
+    }
+    .register-button {
+        text-align: center;
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 25px;
+    }
+    .content {
+        margin-top: 25px;
+        @extend %flexRow;
+        align-items: flex-start;
+        width: 100%;
+        gap: 50px;
+        .form {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .error {
+                color: red;
+                font-size: 12px;
+                display: none;
+            }
+            .error.display-error {
+                display: block;
+            }
+            label {
+                display: block;
+                font-weight: normal;
+                pointer-events: none;
+                width: 70%;
+                }
+            input[type=text], input[type=date], input[type=tel], input[type=email] {
+                width: 70%;
+                height: 50px;
+                padding: 15px 10px;
+                background: white;
+                border: none;
+                border-radius: 0.3125rem;
+                outline: none;
+                color: $secondary-color;
+                    &:focus {
+                        border: 2px solid $third-color;
+                    }
+                }
+            input[type=radio] {
+                margin-top: 10px;
+                }
+        }
+        .aside {
+           position: sticky;
+           top: 25px;
+           flex: 1;
+           display: flex;
+           flex-direction: column;
+           border: 1px solid white;
+           border-radius: 0.3125rem;
+           height: 700px;
+           &-img {
+            border-bottom: 1px solid white;
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 0.3125rem 0.3125rem 0 0;
+            }
+           }
+           &-title {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid white;
+            height: 100px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+                h1 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                h2 {
+                    font-size: 18px;
+                    font-weight: 200;
+                }
+            }
+            &-content {
+                padding-left: 10px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 10px;
+                height: 400px;
+                h3 {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+                .aside-bulleted-list {
+                    padding-left: 17px;
+                    ul {
+                        li {
+                            margin-top: 5px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-18 {
+    @extend %flexRow;
+    justify-content: center;
+    min-height: 500px !important;
+    .complete {
+        text-align: center;
+        color: white;
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 200;
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.register-icon {
+    left: -15%;
+    top: 60%;
+}
+
+.register-icon-flash {
+    left:-5%;
+    top: 50%;
+    width: 40%;
+}
+
+@media (max-width: 1199px) {
+.section-17 {
+    .content {
+        .aside {
+            position: sticky;
+            top: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid white;
+            border-radius: 0.3125rem;
+            height: 700px;
+            &-img {
+             border-bottom: 1px solid white;
+             height: 100%;
+             width: 100%;
+             img {
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+             }
+            }
+            &-title {
+             padding-left: 10px;
+             border-bottom: 1px solid white;
+             height: 100px;
+             padding-top: 15px;
+             padding-bottom: 15px;
+                 h1 {
+                     font-size:16px;
+                     font-weight: 600;
+                 }
+                 h2 {
+                     font-size: 16px;
+                     font-weight: 200;
+                 }
+             }
+    }
+}
+}
+}
+
+@media (max-width: 991px) {
+    .section-11 {
+        &-title {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+    .section-16 {
+        .timestamp {
+            h2 {
+                font-size: $h3-fontSize;
+            }
+        }
+    }
+
+    .section-17 {
+        .content {
+            .form {
+                flex: 1.5;
+                label {
+                    width: 100%;
+                    }
+                input[type=text], input[type=date], input[type=tel], input[type=email] {
+                    width: 100%;
+                    }
+            }
+            .aside {
+                flex: 1.5;
+        }
+    }
+    }
+    .section-18 {
+        .complete {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-16 {
+        .timestamp {
+            h2 {
+                font-size: 16px;
+                padding-left: 15px;
+            }
+        }
+    }
+    .section-17 {
+        .content {
+            .aside {
+            height:800px ;
+            &-content {
+                height: 500px;
+            }
+            &-title {
+                height: 200px;
+            }
+        }
+    }
+    }
+}
+
+@media (max-width: 575px) {
+    .section-16 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-17 {
+        padding-left: 10px;
+        padding-right: 10px;
+        .content {
+            .aside {
+            height:100% ;
+            &-content {
+                height: 60%;
+            }
+            &-title {
+                height: 20%;
+            }
+        }
+    }
+    }
+}
